@@ -1,0 +1,38 @@
+nz-layout {
+  min-width: min-content;
+}
+
+nz-header {
+  padding: 0;
+  width: 100%;
+  z-index: 2;
+  height: 48px;
+}
+
+[nz-menu] {
+  line-height: 48px;
+}
+
+// nz-content {
+//   margin: 24px;
+// }
+
+nz-footer {
+  text-align: center;
+}
+
+[nz-submenu] div::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  content: '';
+}
+
+.inner-content {
+  background: #fff;
+  padding: 24px;
+  // min-height: 280px;
+}

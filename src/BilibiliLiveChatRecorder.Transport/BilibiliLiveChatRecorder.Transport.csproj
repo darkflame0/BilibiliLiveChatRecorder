@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Darkflame.BilibiliLiveChatRecorder.Transport</RootNamespace>
+    <AssemblyName>Darkflame.BilibiliLiveChatRecorder.Transport</AssemblyName>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.*" />
+    <PackageReference Include="System.Threading.Channels" Version="6.0.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BilibiliLiveApi\BilibiliLiveApi.csproj" />
+    <ProjectReference Include="..\BilibiliLiveChatRecorder.Core\BilibiliLiveChatRecorder.Core.csproj" />
+  </ItemGroup>
+
+</Project>

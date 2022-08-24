@@ -1,0 +1,3303 @@
+{
+  "organizations": [
+    {
+      "name": "asoul",
+      "label": "A-SOUL",
+      "uid": 703007996,
+      "roomId": 22632157
+    },
+    {
+      "name": "eoe",
+      "label": "EOE组合",
+      "uid": 2018113152,
+      "roomId": 25512433
+    },
+    {
+      "name": "virtuareal",
+      "label": "VirtuaReal",
+      "roomId": 21470454,
+      "uid": 413748120
+    },
+    {
+      "name": "chucolala",
+      "label": "ちゅこらら"
+    },
+    {
+      "name": "paryiproject",
+      "label": "Paryi Project"
+    },
+    {
+      "name": "nhotbot",
+      "label": "NHOT BOT",
+      "roomId": 23945568,
+      "uid": 1400431115
+    },
+    {
+      "name": "p-sp",
+      "label": "psplive",
+      "uid": 454673997,
+      "roomId": 22697162,
+      "face": "https://i0.hdslb.com/bfs/face/3971770ed69d866dd268246c7d617bbb4e3a4280.jpg"
+    },
+    {
+      "name": "sixiwanzi",
+      "label": "四禧丸子",
+      "uid": 1129115529,
+      "roomId": 23770941
+    },
+    {
+      "name": "vdproject",
+      "label": "虚研社",
+      "uid": 431412406
+    },
+    {
+      "name": "nebulabeat",
+      "label": "星律动",
+      "uid": 1795366254
+    },
+    {
+      "name": "nijisanji",
+      "label": "NIJISANJI",
+      "roomId": 21346449,
+      "uid": 410484677
+    },
+    {
+      "name": "propro",
+      "label": "ProProProduction",
+      "uid": 1372999271
+    },
+    {
+      "name": "quantum",
+      "label": "量子少年",
+      "roomId": 23905455,
+      "uid": 1895683714
+    },
+    {
+      "name": "qianniao",
+      "label": "千鸟战队",
+      "uid": 553771121,
+      "roomId": 22622904
+    },
+    {
+      "name": "vivid",
+      "label": "ViViD",
+      "uid": 392214433,
+      "face": "https://i1.hdslb.com/bfs/face/f6648474ab21fa82cce464da8d63762740ea5daf.jpg"
+    },
+    {
+      "name": "xuefeng",
+      "label": "雪风军团",
+      "uid": 405281700
+    },
+    {
+      "name": "hanayori",
+      "label": "花寄女子寮",
+      "face": "https://static.darkflame.ga/vup/face/p9Ahb_2p_400x400.png"
+    },
+    {
+      "name": "chaodianvup",
+      "label": "超电VUP",
+      "roomId": 22291096,
+      "uid": 597066058
+    },
+    {
+      "name": "providence",
+      "label": "Providence企划",
+      "uid": 486301412
+    },
+    {
+      "name": "gems",
+      "label": "宝石社",
+      "uid": 1976921087
+    },
+    {
+      "name": "superv",
+      "label": "超V学园",
+      "roomId": 22291096,
+      "uid": 477002148
+    },
+    {
+      "name": "chaoslive",
+      "label": "chaoslive",
+      "roomId": 21470618,
+      "uid": 413923011
+    },
+    {
+      "name": "dotlive",
+      "label": ".LIVE",
+      "face": "https://static.darkflame.ga/vup/face/tglswtot_400x400.jpg"
+    },
+    {
+      "name": "react",
+      "label": "Re:AcT",
+      "face": "https://static.darkflame.ga/vup/face/6Utu6aFm_400x400.jpg"
+    },
+    {
+      "name": "wactor",
+      "label": "WACTOR",
+      "face": "https://i1.hdslb.com/bfs/face/b66d639b3d0a102f9abe4efeaaabdc2853ae50b7.jpg"
+    },
+    {
+      "name": "codeecho",
+      "label": "CodeEcho",
+      "roomId": 21739989,
+      "uid": 415295159,
+      "face": "https://i0.hdslb.com/bfs/face/eb6e10f8befbcd5852e79ee8628807cec4b8e66c.jpg"
+    },
+    {
+      "name": "hololivecn",
+      "label": "HololiveCN",
+      "roomId": 8982686,
+      "uid": 286700005
+    },
+    {
+      "name": "hololive",
+      "label": "Hololive",
+      "roomId": 8982686,
+      "uid": 286700005,
+      "face": "https://i0.hdslb.com/bfs/face/52f316ed4b89f48f3fea7cc165585c04c32f32df.jpg"
+    }
+    //{
+    //  "name": "hololiveen",
+    //  "label": "HololiveEN",
+    //  "roomId": 8982686,
+    //  "uid": 286700005
+    //},
+    //{
+    //  "name": "holostars",
+    //  "label": "holostars",
+    //  "roomId": 21674641,
+    //  "uid": 444316844
+    //}
+  ],
+  "livers": [
+    {
+      "uid": 1400431115,
+      "roomId": 23945568,
+      "uname": "NHOT_BOT_Official",
+      "organization": [ "nhotbot" ],
+      "keep": true
+    },
+    {
+      "uid": 1548880519,
+      "roomId": 24812759,
+      "uname": "星罗薄荷_Official",
+      "organization": [ "nhotbot" ],
+      "keep": true
+    },
+    {
+      "uid": 1523315824,
+      "roomId": 24812685,
+      "uname": "UzuMe舞紫梦Official",
+      "organization": [ "nhotbot" ],
+      "keep": true
+    },
+    {
+      "uid": 2139886807,
+      "roomId": 24808180,
+      "uname": "雨音月奈_Official",
+      "organization": [ "nhotbot" ],
+      "keep": true
+    },
+    {
+      "uid": 2052064438,
+      "roomId": 22824550,
+      "uname": "罗菈Rola",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 1926156228,
+      "roomId": 22608112,
+      "uname": "希亚娜Ciyana",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 693,
+      "roomId": 22348429,
+      "uname": "赫卡Tia",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 623441609,
+      "roomId": 22347045,
+      "uname": "凤玲天天Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 436693674,
+      "roomId": 22159299,
+      "uname": "早濑弥生Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 508963009,
+      "roomId": 21919321,
+      "uname": "HiiroVTuber",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 692283831,
+      "roomId": 22571958,
+      "uname": "美波七海-official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 4911722,
+      "roomId": 22074371,
+      "uname": "黑桐亚里亚Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 745493,
+      "roomId": 8792912,
+      "uname": "咩栗",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 617459493,
+      "roomId": 22384516,
+      "uname": "呜米",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 234782,
+      "roomId": 544625,
+      "uname": "祈Inory",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 541696090,
+      "roomId": 22340341,
+      "uname": "早见咲Saki",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 8775742,
+      "roomId": 544758,
+      "uname": "优十_先生",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 349991143,
+      "roomId": 12235923,
+      "uname": "神楽Mea_Official",
+      "organization": [ "nhotbot" ],
+      "keep": true
+    },
+    {
+      "uid": 492862,
+      "roomId": 566227,
+      "uname": "阳向心美Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 153869,
+      "roomId": 595575,
+      "uname": "温珀子ねんねOfficial",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 451066708,
+      "roomId": 21602686,
+      "uname": "新科娘Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 386900246,
+      "roomId": 21304638,
+      "uname": "神楽七奈Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 39267739,
+      "roomId": 4316215,
+      "uname": "铃音_Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 387636363,
+      "roomId": 21013446,
+      "uname": "雫るる_Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 345819190,
+      "roomId": 14222920,
+      "uname": "Kanna_康娜Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 18149131,
+      "roomId": 704808,
+      "uname": "Overidea_China",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 434662713,
+      "roomId": 21448649,
+      "uname": "NoWorld_Official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 1976921087,
+      "uname": "GEMS_COMPANY官方",
+      "organization": [ "xuefeng" ],
+      "keep": true
+    },
+    {
+      "uid": 1205886701,
+      "roomId": 22891675,
+      "uname": "水科葵_official",
+      "organization": [ "gems" ],
+      "keep": true
+    },
+    {
+      "uid": 603811931,
+      "roomId": 0,
+      "uname": "长谷美琴_official",
+      "organization": [ "gems" ],
+      "keep": true
+    },
+    {
+      "uid": 2080453344,
+      "roomId": 0,
+      "uname": "一文字玛雅_official",
+      "organization": [ "gems" ],
+      "keep": true
+    },
+    {
+      "uid": 1802613870,
+      "roomId": 0,
+      "uname": "星菜日向夏_official",
+      "organization": [ "gems" ],
+      "keep": true
+    },
+    {
+      "uid": 405281700,
+      "roomId": 21744235,
+      "uname": "雪风军团",
+      "organization": [ "xuefeng" ],
+      "keep": true
+    },
+    {
+      "uid": 358695457,
+      "roomId": 13576775,
+      "uname": "Siva_小虾鱼_",
+      "organization": [ "xuefeng" ],
+      "keep": true
+    },
+    {
+      "uid": 646432928,
+      "roomId": 22918711,
+      "uname": "路理Kuri",
+      "organization": [ "xuefeng" ],
+      "keep": true
+    },
+    {
+      "uid": 473764233,
+      "roomId": 21627536,
+      "uname": "田汐汐_Official",
+      "organization": [ "xuefeng" ],
+      "keep": true
+    },
+    {
+      "uid": 328284808,
+      "roomId": 13342325,
+      "uname": "伊恩姬_故障Ai",
+      "organization": [ "xuefeng" ],
+      "keep": true
+    },
+    {
+      "uid": 510047,
+      "roomId": 22333522,
+      "uname": "伊万_iiivan",
+      "organization": [ "xuefeng" ],
+      "keep": true
+    },
+    {
+      "uid": 431412406,
+      "roomId": 0,
+      "uname": "虚研社Official",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 636674318,
+      "roomId": 22908657,
+      "uname": "虚研社经纪人Official",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 525105971,
+      "roomId": 22067425,
+      "uname": "紫海由爱Channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 2565338,
+      "roomId": 23154262,
+      "uname": "云絮channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 399491783,
+      "roomId": 23332686,
+      "uname": "恰蘑菇Channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1697848019,
+      "roomId": 23490978,
+      "uname": "赤五教教主亮亮",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 475656353,
+      "roomId": 23553760,
+      "uname": "暮月Medus",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1712524289,
+      "roomId": 23502118,
+      "uname": "雪涅schnee",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 134637395,
+      "roomId": 23188396,
+      "uname": "凉宫雨Ame",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 507311997,
+      "roomId": 22361593,
+      "uname": "艾维雷特Ivelet",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 28677456,
+      "roomId": 2652387,
+      "uname": "劉俊朗",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1093280488,
+      "roomId": 23173170,
+      "uname": "害害Hihi",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1182259801,
+      "roomId": 23272313,
+      "uname": "埃瓦兹Eihwaz",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 447425924,
+      "roomId": 23316776,
+      "uname": "耶绒Yerom",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1782342595,
+      "roomId": 23157516,
+      "uname": "春里Haruri",
+      "organization": [
+        "vdproject"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 626628,
+      "roomId": 1155152,
+      "uname": "E99_Channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1865376713,
+      "roomId": 23140244,
+      "uname": "青井葵aoi",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1617745556,
+      "roomId": 23010688,
+      "uname": "鬼怒千月",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 76080175,
+      "roomId": 23242223,
+      "uname": "小荧Lumos",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1323227037,
+      "roomId": 23252619,
+      "uname": "山椒阿露波Arpa",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 688053738,
+      "roomId": 22529843,
+      "uname": "卡诺娅Kanoa",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 179926553,
+      "roomId": 23244725,
+      "uname": "莉莉拉Lilila",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 11512994,
+      "roomId": 23451741,
+      "uname": "白薇Vivia",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1087714512,
+      "roomId": 22753243,
+      "uname": "松塔塔_channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 320225995,
+      "roomId": 14991565,
+      "uname": "萨菲尔Saphire",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 34099792,
+      "roomId": 4400273,
+      "uname": "李青云LiQingyun",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1785908279,
+      "roomId": 23157235,
+      "uname": "魔宫永恋Mamiya",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1307009550,
+      "roomId": 23182032,
+      "uname": "灯织・火音璃Channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1357409459,
+      "roomId": 23149694,
+      "uname": "饴宫Doki",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 335241802,
+      "roomId": 21547055,
+      "uname": "砂羽Snipa",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 3016287,
+      "roomId": 6157509,
+      "uname": "熹咕哇",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1636470242,
+      "roomId": 23423734,
+      "uname": "星海诺伦Norn",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 5563350,
+      "roomId": 4138602,
+      "uname": "小希小桃Channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1734978373,
+      "roomId": 22696954,
+      "uname": "小柔Channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 698029620,
+      "roomId": 22696653,
+      "uname": "兰音Reine",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1501380958,
+      "roomId": 22746343,
+      "uname": "艾露露Ailurus",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 4763529,
+      "roomId": 40529,
+      "uname": "幽灵子辰Channel",
+      "organization": [ "vdproject" ],
+      "keep": true
+    },
+    {
+      "uid": 364225566,
+      "roomId": 14578426,
+      "uname": "战斗吧歌姬官方账号",
+      "organization": [ "nebulabeat" ],
+      "keep": true
+    },
+    {
+      "uid": 1315573139,
+      "roomId": 24087754,
+      "uname": "罗兹Blazing",
+      "organization": [ "nebulabeat" ],
+      "keep": true
+    },
+    {
+      "uid": 1011797664,
+      "roomId": 24697117,
+      "uname": "卡缇娅也不知道鸭",
+      "organization": [ "nebulabeat" ],
+      "keep": true
+    },
+    {
+      "uid": 1795366254,
+      "roomId": 23225527,
+      "uname": "星律动Nebula-Beat",
+      "organization": [ "nebulabeat" ],
+      "keep": true
+    },
+    {
+      "uid": 1219196749,
+      "roomId": 23303212,
+      "uname": "唐九夏还想再躺一下",
+      "organization": [ "nebulabeat" ],
+      "keep": true
+    },
+    {
+      "uid": 1383815813,
+      "roomId": 23221095,
+      "uname": "吉诺儿kino",
+      "organization": [ "nebulabeat" ],
+      "keep": true
+    },
+    {
+      "uid": 486301412,
+      "roomId": 0,
+      "uname": "Providence企划",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 1181247064,
+      "roomId": 23615209,
+      "uname": "森川雪yuki",
+      "organization": [
+        "providence"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 31909735,
+      "roomId": 488283,
+      "uname": "倾澜Chiram",
+      "organization": [
+        "providence"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 846180,
+      "roomId": 3012597,
+      "uname": "喵田弥夜Miya",
+      "organization": [
+        "providence"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1330354774,
+      "roomId": 23465574,
+      "uname": "小侦探由梨佳",
+      "organization": [
+        "providence"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1886584783,
+      "roomId": 23848559,
+      "uname": "徒花院紅Beni",
+      "organization": [
+        "providence"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1848290057,
+      "roomId": 23404362,
+      "uname": "灯瑠hiru",
+      "organization": [
+        "providence"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 384085516,
+      "roomId": 23502022,
+      "uname": "怜奈Leciel",
+      "organization": [
+        "providence"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1516482,
+      "roomId": 42270,
+      "uname": "白桃Shirako",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 11771366,
+      "roomId": 1114551,
+      "uname": "莉夏Lecia",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 1968783589,
+      "roomId": 22926711,
+      "uname": "茉吱Mojuko",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 1324211803,
+      "roomId": 23126335,
+      "uname": "路伊丝Louise",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 1453221585,
+      "roomId": 22937884,
+      "uname": "原野牟牟Mumu",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 613345189,
+      "roomId": 22344968,
+      "uname": "蛙吹Keroro",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 440772821,
+      "roomId": 21502501,
+      "uname": "灰音Haine",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 49631892,
+      "roomId": 21292831,
+      "uname": "月隐空夜",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 22792002,
+      "roomId": 22735927,
+      "uname": "洛汐亚Lucia",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 2110481733,
+      "roomId": 23087199,
+      "uname": "砂糖Satou",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 353361863,
+      "roomId": 21514463,
+      "uname": "七濑Unia",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 573930836,
+      "roomId": 22566228,
+      "uname": "咲间妮娜Official",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 13908542,
+      "roomId": 22251977,
+      "uname": "柊真华Official",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 576858552,
+      "roomId": 22323445,
+      "uname": "毬亚Maria",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 147983220,
+      "roomId": 21570295,
+      "uname": "满月Channel",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 567234492,
+      "roomId": 22321043,
+      "uname": "玛安娜Myanna",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 12497617,
+      "roomId": 4788550,
+      "uname": "胡桃Usa",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 269415357,
+      "roomId": 7688602,
+      "uname": "花花Haya",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 117906,
+      "roomId": 11306,
+      "uname": "阿伊蕾特Ayelet",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 352332,
+      "roomId": 10354150,
+      "uname": "弑色木真理",
+      "organization": [ "providence" ],
+      "keep": true
+    },
+    {
+      "uid": 553771121,
+      "roomId": 22622904,
+      "uname": "千鸟战队",
+      "organization": [ "qianniao" ],
+      "keep": true
+    },
+    {
+      "uid": 1891728206,
+      "roomId": 22623163,
+      "uname": "千鸟战队_Coco",
+      "organization": [ "qianniao" ],
+      "keep": true
+    },
+    {
+      "uid": 667526012,
+      "roomId": 22622535,
+      "uname": "千鸟战队_文静",
+      "organization": [ "qianniao" ],
+      "keep": true
+    },
+    {
+      "uid": 1620923329,
+      "roomId": 22622469,
+      "uname": "千鸟战队_琳",
+      "organization": [ "qianniao" ],
+      "keep": true
+    },
+    {
+      "uid": 1090010845,
+      "roomId": 22622290,
+      "uname": "千鸟战队_艾瑞思",
+      "organization": [ "qianniao" ],
+      "keep": true
+    },
+    {
+      "uid": 334537711,
+      "roomId": 13747625,
+      "uname": "千鸟战队_艾白",
+      "organization": [ "qianniao" ],
+      "keep": true
+    },
+    {
+      "uid": 703007996,
+      "roomId": 22632157,
+      "uname": "A-SOUL_Official",
+      "organization": [ "asoul" ],
+      "keep": true
+    },
+    {
+      "uid": 672346917,
+      "roomId": 22625025,
+      "uname": "向晚大魔王",
+      "organization": [ "asoul" ],
+      "keep": true
+    },
+    {
+      "uid": 672353429,
+      "roomId": 22632424,
+      "uname": "贝拉kira",
+      "organization": [ "asoul" ],
+      "keep": true
+    },
+    {
+      "uid": 351609538,
+      "roomId": 22634198,
+      "uname": "珈乐Carol",
+      "organization": [ "asoul" ],
+      "keep": true
+    },
+    {
+      "uid": 672328094,
+      "roomId": 22637261,
+      "uname": "嘉然今天吃什么",
+      "organization": [ "asoul" ],
+      "keep": true
+    },
+    {
+      "uid": 672342685,
+      "roomId": 22625027,
+      "uname": "乃琳Queen",
+      "organization": [ "asoul" ],
+      "keep": true
+    },
+    {
+      "uid": 2018113152,
+      "roomId": 25512433,
+      "uname": "EOE组合",
+      "organization": [ "eoe" ],
+      "keep": true
+    },
+    {
+      "uid": 1811071010,
+      "roomId": 25512485,
+      "uname": "虞莫MOMO",
+      "organization": [
+        "eoe"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1795147802,
+      "roomId": 25512501,
+      "uname": "柚恩不加糖",
+      "organization": [
+        "eoe"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1669777785,
+      "roomId": 25512443,
+      "uname": "露早GOGO",
+      "organization": [
+        "eoe"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1875044092,
+      "roomId": 25512476,
+      "uname": "莞儿睡不醒",
+      "organization": [
+        "eoe"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1778026586,
+      "roomId": 25512465,
+      "uname": "米诺高分少女",
+      "organization": [
+        "eoe"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1895683714,
+      "roomId": 23905455,
+      "uname": "量子少年Official",
+      "organization": [ "quantum" ],
+      "keep": true
+    },
+    {
+      "uid": 1535525542,
+      "roomId": 23905421,
+      "uname": "量子少年-泽一",
+      "organization": [ "quantum" ],
+      "keep": true
+    },
+    {
+      "uid": 1461176910,
+      "roomId": 23965761,
+      "uname": "量子少年-祥太",
+      "organization": [ "quantum" ],
+      "keep": true
+    },
+    {
+      "uid": 1757836012,
+      "roomId": 23905403,
+      "uname": "量子少年-楚枫",
+      "organization": [ "quantum" ],
+      "keep": true
+    },
+    {
+      "uid": 1230039261,
+      "roomId": 23905374,
+      "uname": "量子少年-慕宇",
+      "organization": [ "quantum" ],
+      "keep": true
+    },
+    {
+      "uid": 1576121,
+      "roomId": 4895312,
+      "uname": "帕里_Paryi",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 2097219437,
+      "roomId": 23733603,
+      "uname": "灵灵乃reno",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 1096223397,
+      "roomId": 22853788,
+      "uname": "白雪艾莉娅_Official",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 372984197,
+      "roomId": 14052636,
+      "uname": "夢乃栞Yumeno_Shiori",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 380829248,
+      "roomId": 14327465,
+      "uname": "花园Serena",
+      "organization": [ "paryiproject", "nhotbot" ],
+      "keep": true
+    },
+    {
+      "uid": 3149619,
+      "roomId": 3822389,
+      "uname": "有栖Mana_Official",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 6055289,
+      "roomId": 947447,
+      "uname": "高槻律official",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 8119834,
+      "roomId": 12770821,
+      "uname": "千草はな",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 2778044,
+      "roomId": 7962050,
+      "uname": "森永みうofficial",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 623441612,
+      "roomId": 22347054,
+      "uname": "椎名菜羽Official",
+      "organization": [ "paryiproject" ],
+      "keep": true
+    },
+    {
+      "uid": 406805563,
+      "roomId": 21320551,
+      "uname": "乙女音Official",
+      "organization": [ "chucolala" ],
+      "keep": true
+    },
+    {
+      "uid": 2299184,
+      "roomId": 8725120,
+      "uname": "古守血遊official",
+      "organization": [ "chucolala" ],
+      "keep": true
+    },
+    {
+      "uid": 442902274,
+      "roomId": 21573665,
+      "uname": "紫桃爱音Official",
+      "organization": [ "chucolala" ],
+      "keep": true
+    },
+    {
+      "uid": 407106379,
+      "roomId": 21396545,
+      "uname": "绯赤艾莉欧Official",
+      "organization": [ "chucolala", "nhotbot" ],
+      "keep": true
+    },
+    {
+      "uid": 480432362,
+      "roomId": 21685677,
+      "uname": "鈴宮鈴",
+      "organization": [ "chucolala" ],
+      "keep": true
+    },
+    {
+      "uid": 4198849,
+      "roomId": 6542258,
+      "uname": "缀目日伞Official",
+      "organization": [ "chucolala" ],
+      "keep": true
+    },
+    {
+      "uid": 401480763,
+      "roomId": 21402309,
+      "uname": "眞白花音_Official",
+      "organization": [ "chucolala" ],
+      "keep": true
+    },
+    {
+      "uid": 1202504814,
+      "roomId": 22671795,
+      "uname": "暗妃鲁咪蕾Official",
+      "organization": [ "chucolala" ],
+      "keep": true
+    },
+    {
+      "uid": 410484677,
+      "roomId": 21346449,
+      "uname": "NIJISANJI",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 1921596130,
+      "roomId": 24731531,
+      "uname": "Ike_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 1544125954,
+      "roomId": 24731569,
+      "uname": "Mysta_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 1775966996,
+      "roomId": 24731541,
+      "uname": "Vox_EN_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 1673137696,
+      "roomId": 24731561,
+      "uname": "Luca_EN_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 1420890712,
+      "roomId": 24731543,
+      "uname": "Shu_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 690608705,
+      "roomId": 23465045,
+      "uname": "芙莲Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 690608708,
+      "roomId": 23465043,
+      "uname": "伊卜拉新Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 690608699,
+      "roomId": 23465036,
+      "uname": "天宫心Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 690608707,
+      "roomId": 23465062,
+      "uname": "梅丽莎・金莲花Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 690608703,
+      "roomId": 23465065,
+      "uname": "朝日南茜Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 628292888,
+      "roomId": 22543148,
+      "uname": "阿露丝Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 690608697,
+      "roomId": 22543132,
+      "uname": "纽伊Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 628292889,
+      "roomId": 22543154,
+      "uname": "叶加濑冬雪Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 628292890,
+      "roomId": 22543160,
+      "uname": "夜见蕾娜Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 628292887,
+      "roomId": 22543135,
+      "uname": "黛灰Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 666726796,
+      "roomId": 22470212,
+      "uname": "星川莎拉_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 666726795,
+      "roomId": 22470168,
+      "uname": "加贺美隼人Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 666726797,
+      "roomId": 22470202,
+      "uname": "白雪巴_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 666726798,
+      "roomId": 22470179,
+      "uname": "健屋花那_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 666726794,
+      "roomId": 22470215,
+      "uname": "铃原露露_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 595407554,
+      "roomId": 22376010,
+      "uname": "摩伊拉Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 595407556,
+      "roomId": 22376018,
+      "uname": "利维Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 595407555,
+      "roomId": 22376014,
+      "uname": "多拉Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 586880205,
+      "roomId": 22232169,
+      "uname": "铃木胜Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 586880204,
+      "roomId": 22232167,
+      "uname": "雪城真寻Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 586880203,
+      "roomId": 22232161,
+      "uname": "轰京子Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 586880202,
+      "roomId": 22232141,
+      "uname": "相羽初叶_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 511613154,
+      "roomId": 21908182,
+      "uname": "梦追翔Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 441666968,
+      "roomId": 21501731,
+      "uname": "德比鲁Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 436596840,
+      "roomId": 21463247,
+      "uname": "鹰宫莉音Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 436596836,
+      "roomId": 21463224,
+      "uname": "森中花咲Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 436596838,
+      "roomId": 21463238,
+      "uname": "御伽原江良Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 434563422,
+      "roomId": 21449065,
+      "uname": "葛叶Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 441666967,
+      "roomId": 21501730,
+      "uname": "贝尔蒙德Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 436596837,
+      "roomId": 21463227,
+      "uname": "家长麦Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 477780496,
+      "roomId": 21656036,
+      "uname": "修女克蕾雅Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 477780497,
+      "roomId": 21656037,
+      "uname": "舞元启介Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 477780499,
+      "roomId": 21656050,
+      "uname": "梦月萝娅_Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 477780498,
+      "roomId": 21656043,
+      "uname": "艾克斯Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 458154141,
+      "roomId": 21575222,
+      "uname": "社筑Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 458154143,
+      "roomId": 21575228,
+      "uname": "安洁Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 458154142,
+      "roomId": 21575226,
+      "uname": "戌亥床Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 458154140,
+      "roomId": 21575216,
+      "uname": "童田明治Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 458154139,
+      "roomId": 21575212,
+      "uname": "郡道美玲Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 458154144,
+      "roomId": 21575231,
+      "uname": "铃鹿诗子Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 436596839,
+      "roomId": 21463219,
+      "uname": "笹木咲Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 410455162,
+      "roomId": 21449061,
+      "uname": "樋口枫Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 434564604,
+      "roomId": 21450685,
+      "uname": "龙胆尊Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 434565011,
+      "roomId": 21449083,
+      "uname": "物述有栖Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 434563934,
+      "roomId": 21449068,
+      "uname": "叶Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 436596841,
+      "roomId": 21463249,
+      "uname": "莉泽Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 403930401,
+      "roomId": 21302479,
+      "uname": "绿仙Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 403928672,
+      "roomId": 21302477,
+      "uname": "本间向日葵Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 403927583,
+      "roomId": 21302469,
+      "uname": "椎名唯华Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 403921378,
+      "roomId": 21302352,
+      "uname": "静凛Official",
+      "organization": [ "nijisanji" ],
+      "keep": true
+    },
+    {
+      "uid": 413748120,
+      "roomId": 21470454,
+      "uname": "VirtuaReal",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 282994,
+      "roomId": 47377,
+      "uname": "泠鸢yousa",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 11073,
+      "roomId": 48743,
+      "uname": "hanser",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 3046429,
+      "roomId": 938957,
+      "uname": "祖娅纳惜",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 595407557,
+      "roomId": 22359795,
+      "uname": "菜菜子Nanako",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 474113504,
+      "roomId": 0,
+      "uname": "樱樱火Official",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 1481781085,
+      "roomId": 24102587,
+      "uname": "幽乐咩Ureme",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 61639371,
+      "roomId": 21484828,
+      "uname": "轴伊Joi_Channel",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 6853766,
+      "roomId": 3032130,
+      "uname": "舒三妈Susam",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 176836079,
+      "roomId": 6068126,
+      "uname": "糯依Noi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 529249,
+      "roomId": 282208,
+      "uname": "诺莺Nox",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 741520,
+      "roomId": 33942,
+      "uname": "茶冷_Channel",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 640156170,
+      "roomId": 22425326,
+      "uname": "素星_Official",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 666726803,
+      "roomId": 22470189,
+      "uname": "伊莎贝拉Official",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 392505232,
+      "roomId": 21224291,
+      "uname": "安堂いなり_official",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 98181,
+      "roomId": 4418655,
+      "uname": "菫妃奈Official",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 36795838,
+      "roomId": 1573301,
+      "uname": "KINGSK科科_Channel",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 1750561,
+      "roomId": 8721033,
+      "uname": "蜜球兔",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 322210278,
+      "roomId": 21736138,
+      "uname": "魔魔マラ",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 471308347,
+      "roomId": 21664698,
+      "uname": "寿寿歌_suzuka",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 7706705,
+      "roomId": 80397,
+      "uname": "阿梓从小就很可爱",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 14387072,
+      "roomId": 6374209,
+      "uname": "小可学妹",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 628292885,
+      "roomId": 22459139,
+      "uname": "金克茜Jinxy",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 558070434,
+      "roomId": 22459102,
+      "uname": "露露娜Ruruna",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 558070435,
+      "roomId": 22459095,
+      "uname": "鹤森Mori",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 12485637,
+      "roomId": 784734,
+      "uname": "宫园凛RinMiyazono",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 596141957,
+      "roomId": 22459141,
+      "uname": "笙妤Syo",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 1484169431,
+      "roomId": 23805029,
+      "uname": "雾深Girimi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 1155425566,
+      "roomId": 23805066,
+      "uname": "希侑Kiyuu",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 1405589619,
+      "roomId": 23805059,
+      "uname": "希维Sybil",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608714,
+      "roomId": 23805078,
+      "uname": "狩砂Karisa",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608709,
+      "roomId": 23550749,
+      "uname": "尤格Yog",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608711,
+      "roomId": 23550784,
+      "uname": "克克_Keke",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608710,
+      "roomId": 23550773,
+      "uname": "暴食Hunger",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608712,
+      "roomId": 23550793,
+      "uname": "友夏Uka",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608690,
+      "roomId": 23260932,
+      "uname": "恋诗夜Koxia",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608695,
+      "roomId": 23260979,
+      "uname": "库伽Hakuja",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608692,
+      "roomId": 23260965,
+      "uname": "未羽Miyu",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608689,
+      "roomId": 23260856,
+      "uname": "夜宫Yomiya",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608698,
+      "roomId": 23260993,
+      "uname": "瑞娅_Rhea",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608704,
+      "roomId": 23017349,
+      "uname": "桃星Tocci",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608696,
+      "roomId": 23017346,
+      "uname": "绮楼Qilou",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608688,
+      "roomId": 23017343,
+      "uname": "吉吉Kiti",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608702,
+      "roomId": 22778627,
+      "uname": "九十九_Tsukumo",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608701,
+      "roomId": 22778617,
+      "uname": "犬童Kendou",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608693,
+      "roomId": 22778610,
+      "uname": "勾檀Mayumi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608694,
+      "roomId": 22605466,
+      "uname": "伊深Imi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608687,
+      "roomId": 22778596,
+      "uname": "蕾米Remi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608691,
+      "roomId": 22605464,
+      "uname": "千幽Chiyuu",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608686,
+      "roomId": 22605463,
+      "uname": "茉里Mari",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 690608706,
+      "roomId": 22605469,
+      "uname": "田野柴Tanoshiba",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 666726801,
+      "roomId": 22470208,
+      "uname": "勺Shaun",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 666726799,
+      "roomId": 22470216,
+      "uname": "悠亚Yua",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 666726800,
+      "roomId": 22470210,
+      "uname": "星宸Sirius",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 666726802,
+      "roomId": 22470204,
+      "uname": "瑞芙Reve",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 558070433,
+      "roomId": 22389319,
+      "uname": "千春_Chiharu",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 558070436,
+      "roomId": 22389323,
+      "uname": "清良Kiyora",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 628292881,
+      "roomId": 22389314,
+      "uname": "卡欧斯_Chaos",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 370688671,
+      "roomId": 22111442,
+      "uname": "帕克丝Pax",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 370689338,
+      "roomId": 22086027,
+      "uname": "御水Mimoi",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 370689210,
+      "roomId": 22111450,
+      "uname": "萨麦尔_Samael",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 370687372,
+      "roomId": 22111414,
+      "uname": "紫纪Shiki",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 370687588,
+      "roomId": 22111428,
+      "uname": "花留Karu",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 319810877,
+      "roomId": 21763337,
+      "uname": "星也seiya",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 490331391,
+      "roomId": 21763344,
+      "uname": "沙夜_Saya",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 56748733,
+      "roomId": 21756924,
+      "uname": "雪绘Yukie",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 480745939,
+      "roomId": 21696953,
+      "uname": "罗伊_Roi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 474369808,
+      "roomId": 21696957,
+      "uname": "度人Tabibito",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 480675481,
+      "roomId": 21696929,
+      "uname": "八木迪之",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 480680646,
+      "roomId": 21696950,
+      "uname": "阿萨Aza",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 477306079,
+      "roomId": 21672024,
+      "uname": "真绯瑠mahiru",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 477342747,
+      "roomId": 21672022,
+      "uname": "星弥Hoshimi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 477317922,
+      "roomId": 21672023,
+      "uname": "弥希Miki",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 455965041,
+      "roomId": 21669084,
+      "uname": "羽音Hanon",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 472845978,
+      "roomId": 21613353,
+      "uname": "有加plus",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 472821519,
+      "roomId": 21615277,
+      "uname": "喵月nyatsuki",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 472877684,
+      "roomId": 21613356,
+      "uname": "惑姬Waku",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 455916618,
+      "roomId": 21571739,
+      "uname": "无理MURI",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 434341786,
+      "roomId": 21452118,
+      "uname": "一果Ichigo",
+      "organization": [ "virtuareal" ],
+      "retire": true
+    },
+    {
+      "uid": 434401868,
+      "roomId": 21457197,
+      "uname": "中单光一",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 434334701,
+      "roomId": 21452505,
+      "uname": "七海Nana7mi",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 420249427,
+      "roomId": 21403609,
+      "uname": "琉绮Ruki",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 421267475,
+      "roomId": 21403601,
+      "uname": "艾因Eine",
+      "organization": [ "virtuareal" ],
+      "keep": true
+    },
+    {
+      "uid": 477002148,
+      "roomId": 21717356,
+      "uname": "超V学园",
+      "organization": [ "superv" ],
+      "keep": true
+    },
+    {
+      "uid": 474593912,
+      "roomId": 21622694,
+      "uname": "超V学园_白祁Seven",
+      "organization": [ "superv" ],
+      "keep": true
+    },
+    {
+      "uid": 474593911,
+      "roomId": 21622688,
+      "uname": "超V学园_慕斯Muse",
+      "organization": [ "superv" ],
+      "keep": true
+    },
+    {
+      "uid": 474593910,
+      "roomId": 21622687,
+      "uname": "超V学园_林伊Eli",
+      "organization": [ "superv" ],
+      "keep": true
+    },
+    {
+      "uid": 474593909,
+      "roomId": 21622680,
+      "uname": "超V学园_林玲Lynn",
+      "organization": [ "superv" ],
+      "keep": true
+    },
+    {
+      "uid": 441382432,
+      "roomId": 21547904,
+      "uname": "小东人魚Official",
+      "organization": [ "hanayori" ],
+      "keep": true
+    },
+    {
+      "uid": 441403698,
+      "roomId": 21671418,
+      "uname": "野野宫のののOfficial",
+      "organization": [ "hanayori" ],
+      "retire": true
+    },
+    {
+      "uid": 316381099,
+      "roomId": 15152878,
+      "uname": "花丸晴琉Official",
+      "organization": [ "hanayori" ],
+      "keep": true
+    },
+    {
+      "uid": 441381282,
+      "roomId": 21547895,
+      "uname": "鹿乃ちゃん",
+      "organization": [ "hanayori" ],
+      "keep": true
+    },
+    {
+      "uid": 454673997,
+      "roomId": 22697162,
+      "uname": "P-SP",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 51030552,
+      "roomId": 1603600,
+      "uname": "星汐Seki",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 477597410,
+      "roomId": 22486793,
+      "uname": "夏鹤仪Tsurugi",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 480248442,
+      "roomId": 22381346,
+      "uname": "北柚香Yuka",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 476725595,
+      "roomId": 21775601,
+      "uname": "西魔幽Yuu",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 3821157,
+      "roomId": 21692711,
+      "uname": "东爱璃Lovely",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 511289062,
+      "roomId": 22188174,
+      "uname": "南音乃Nonno",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 479633069,
+      "roomId": 21677969,
+      "uname": "秋凛子Rinco",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 477332594,
+      "roomId": 21652717,
+      "uname": "白神遥Haruka",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 6365248,
+      "roomId": 479283,
+      "uname": "莲汰-AiTeN",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 186463,
+      "roomId": 337374,
+      "uname": "綾奈奈奈",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 62359,
+      "roomId": 21184136,
+      "uname": "双月-YunaLia",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 899804,
+      "roomId": 411318,
+      "uname": "红晓音Akane",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 402105315,
+      "roomId": 21344122,
+      "uname": "星ノ谷みやOfficial",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 6292535,
+      "roomId": 59563,
+      "uname": "涼宮凛",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 416622817,
+      "roomId": 21413565,
+      "uname": "步玎Pudding",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 147471,
+      "roomId": 10317,
+      "uname": "这是亦枝YY",
+      "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 1878154667,
+      "roomId": 23771139,
+      "uname": "沐霂是MUMU呀",
+      "organization": [ "sixiwanzi" ],
+      "keep": true
+    },
+    {
+      "uid": 1900141897,
+      "roomId": 23770996,
+      "uname": "梨安不迷路",
+      "organization": [ "sixiwanzi" ],
+      "keep": true
+    },
+    {
+      "uid": 1660392980,
+      "roomId": 23771189,
+      "uname": "恬豆发芽了",
+      "organization": [ "sixiwanzi" ],
+      "keep": true
+    },
+    {
+      "uid": 1129115529,
+      "roomId": 23770941,
+      "uname": "四禧丸子_Official",
+      "organization": [ "sixiwanzi" ],
+      "keep": true
+    },
+    {
+      "uid": 1217754423,
+      "roomId": 23771092,
+      "uname": "又一充电中",
+      "organization": [ "sixiwanzi" ],
+      "keep": true
+    },
+    {
+      "uid": 597066058,
+      "roomId": 22291096,
+      "uname": "超电VUP官方账号",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 198297,
+      "roomId": 876396,
+      "uname": "进击的冰糖",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 4690327,
+      "roomId": 2301751,
+      "uname": "筱魈Channel",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 1697694,
+      "roomId": 602283,
+      "uname": "蝶太",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 667042223,
+      "roomId": 22463523,
+      "uname": "瑠奈luna_Official",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 512480,
+      "roomId": 29183,
+      "uname": "YUKIri",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 3295,
+      "roomId": 5275,
+      "uname": "新月冰冰",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 54191665,
+      "roomId": 8643223,
+      "uname": "木糖纯Official",
+      "organization": [ "chaodianvup" ],
+      "keep": true
+    },
+    {
+      "uid": 421347849,
+      "roomId": 21415012,
+      "uname": "白百合リリィOfficial",
+      "organization": [ "vivid" ],
+      "keep": true
+    },
+    {
+      "uid": 487550002,
+      "roomId": 21811136,
+      "uname": "猫芒ベル_Official",
+      "organization": [ "vivid" ],
+      "keep": true
+    },
+    {
+      "uid": 487551829,
+      "roomId": 21955596,
+      "uname": "泡沫メモリ_Official",
+      "organization": [ "vivid" ],
+      "keep": true
+    },
+    {
+      "uid": 391876799,
+      "roomId": 21307497,
+      "uname": "电脑少女siro_小白",
+      "organization": [ "dotlive" ],
+      "keep": true
+    },
+    {
+      "uid": 455868077,
+      "roomId": 21561620,
+      "uname": "神楽すず-official",
+      "organization": [ "dotlive" ],
+      "keep": true
+    },
+    {
+      "uid": 413923011,
+      "roomId": 21470618,
+      "uname": "chaoslive",
+      "organization": [ "chaoslive" ],
+      "keep": true
+    },
+    {
+      "uid": 1950658,
+      "roomId": 41682,
+      "uname": "早稻叽",
+      "organization": [ "chaoslive" ],
+      "keep": true
+    },
+    {
+      "uid": 34194547,
+      "roomId": 377214,
+      "uname": "牛牛子Official",
+      "organization": [ "chaoslive" ],
+      "keep": true
+    },
+    {
+      "uid": 504694462,
+      "roomId": 21884471,
+      "uname": "白夜真宵Official",
+      "organization": [ "chaoslive" ],
+      "keep": true
+    },
+    {
+      "uid": 502916449,
+      "roomId": 21831694,
+      "uname": "白夜天存Official",
+      "organization": [ "chaoslive" ],
+      "keep": true
+    },
+    {
+      "uid": 474593913,
+      "roomId": 21622698,
+      "uname": "狮子神蕾欧娜_official",
+      "organization": [ "react" ],
+      "keep": true
+    },
+    {
+      "uid": 482515504,
+      "roomId": 21693682,
+      "uname": "花铗镜_official",
+      "organization": [ "react" ],
+      "keep": true
+    },
+    {
+      "uid": 482515510,
+      "roomId": 21693692,
+      "uname": "天川花乃official",
+      "organization": [ "react" ],
+      "keep": true
+    },
+    {
+      "uid": 482515509,
+      "roomId": 21693691,
+      "uname": "姬熊结璃Official",
+      "organization": [ "react" ],
+      "keep": true
+    },
+    {
+      "uid": 5570898,
+      "roomId": 6241497,
+      "uname": "白音雪Official",
+      "organization": [ "react" ],
+      "retire": true
+    },
+    {
+      "uid": 612524985,
+      "roomId": 22319849,
+      "uname": "白音雪-official",
+      "organization": [ "react" ],
+      "keep": true
+    },
+    {
+      "uid": 608146606,
+      "roomId": 22310216,
+      "uname": "黑音夜见Official",
+      "organization": [ "react" ],
+      "keep": true
+    },
+    {
+      "uid": 559908566,
+      "roomId": 22189222,
+      "uname": "WACTOR-女仆酱-官方",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1589583375,
+      "roomId": 25483301,
+      "uname": "蕾娅-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1491057187,
+      "roomId": 25362856,
+      "uname": "空真密丽-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1487440724,
+      "roomId": 25040264,
+      "uname": "雪下魅美-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1632657466,
+      "roomId": 24410959,
+      "uname": "东云伊都-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1923344666,
+      "roomId": 24393990,
+      "uname": "佐保姬夕映-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1386545245,
+      "roomId": 23667609,
+      "uname": "犬卷日鞠-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1468306600,
+      "roomId": 23556311,
+      "uname": "皇白璐-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1724136548,
+      "roomId": 23089693,
+      "uname": "紫乃莱拉-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1089059487,
+      "roomId": 23089686,
+      "uname": "星奈铃-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1994541396,
+      "roomId": 23095291,
+      "uname": "库拉里罗滋-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1644927644,
+      "roomId": 23095266,
+      "uname": "妃纳海空-官方WACTOR",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 391614061,
+      "roomId": 21300316,
+      "uname": "日月咪玉-官方",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 486618658,
+      "roomId": 21720308,
+      "uname": "木暮Piyoko-官方",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 486618657,
+      "roomId": 21720301,
+      "uname": "月兔华-官方",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 486618656,
+      "roomId": 21720262,
+      "uname": "心伊齐露-官方",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 497677999,
+      "roomId": 21779064,
+      "uname": "七葉琉伊",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 517746113,
+      "roomId": 22055164,
+      "uname": "御剣莉亚-官方",
+      "organization": [ "wactor" ],
+      "keep": true
+    },
+    {
+      "uid": 1372999271,
+      "roomId": 0,
+      "uname": "propro-official",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1116286149,
+      "roomId": 25089255,
+      "uname": "海童亚奈子_propro",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1528953296,
+      "roomId": 24957899,
+      "uname": "水羽空_propro",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 2005402750,
+      "roomId": 24592169,
+      "uname": "紫槻星砂_propro",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1900434152,
+      "roomId": 23105590,
+      "uname": "恋乃夜舞_propro",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1508519945,
+      "roomId": 23149122,
+      "uname": "白濑葵_propro",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1340967709,
+      "roomId": 23149132,
+      "uname": "花云凛_propro",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1212701254,
+      "roomId": 23603684,
+      "uname": "憩居桃爱_propro",
+      "organization": [
+        "propro"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 692283838,
+      "roomId": 22571956,
+      "uname": "星巡学园official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 1471531748,
+      "roomId": 22671754,
+      "uname": "響由依official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 1506615770,
+      "roomId": 22671757,
+      "uname": "神乃光official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 692283836,
+      "roomId": 22571945,
+      "uname": "奥格丽梅露official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 1460363504,
+      "roomId": 22671762,
+      "uname": "冰置八茅official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 1863599414,
+      "roomId": 22671750,
+      "uname": "星姫绮罗official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 1480503142,
+      "roomId": 22671728,
+      "uname": "Mikado帝_official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 692283835,
+      "roomId": 22571941,
+      "uname": "仓持京子official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 692283833,
+      "roomId": 22571932,
+      "uname": "风纸七鸣official",
+      "organization": [],
+      "keep": true
+    },
+    {
+      "uid": 415295159,
+      "roomId": 21739989,
+      "uname": "CodeEcho",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 51788138,
+      "roomId": 21738056,
+      "uname": "千橙Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 415578378,
+      "roomId": 21379626,
+      "uname": "七柠Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 416203727,
+      "roomId": 21376408,
+      "uname": "铃果Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 489377505,
+      "roomId": 21738080,
+      "uname": "双荔Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 446409293,
+      "roomId": 21517635,
+      "uname": "时音Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 478735811,
+      "roomId": 21664773,
+      "uname": "芭娜娜Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 474628506,
+      "roomId": 21623289,
+      "uname": "柚一Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 453801943,
+      "roomId": 21545501,
+      "uname": "山梨Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 431537245,
+      "roomId": 21469273,
+      "uname": "陆桃Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 429285255,
+      "roomId": 21420315,
+      "uname": "橘九Official",
+      "organization": [ "codeecho" ],
+      "retire": true
+    },
+    {
+      "uid": 286700005,
+      "roomId": 8982686,
+      "uname": "hololive",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 624252706,
+      "roomId": 22349508,
+      "uname": "雪花菈米Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 624252709,
+      "roomId": 22349492,
+      "uname": "桃铃音音Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 624252710,
+      "roomId": 22349494,
+      "uname": "狮白牡丹Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 624252711,
+      "roomId": 22349497,
+      "uname": "魔乃阿萝耶Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 624252712,
+      "roomId": 22349506,
+      "uname": "尾丸波尔卡Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 491474050,
+      "roomId": 21752694,
+      "uname": "角卷棉芽official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 491474049,
+      "roomId": 21752686,
+      "uname": "桐生可可Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 491474051,
+      "roomId": 21752710,
+      "uname": "常暗永远Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 491474048,
+      "roomId": 21752681,
+      "uname": "天音彼方Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 491474052,
+      "roomId": 21752719,
+      "uname": "姬森璐娜Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 454955503,
+      "roomId": 21584153,
+      "uname": "宝钟玛琳Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 454733056,
+      "roomId": 21583736,
+      "uname": "白银诺艾尔Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 454737600,
+      "roomId": 21572617,
+      "uname": "不知火芙蕾雅Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 9034870,
+      "roomId": 190577,
+      "uname": "星街彗星Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 443305053,
+      "roomId": 21560356,
+      "uname": "兔田佩克拉Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 443300418,
+      "roomId": 21545232,
+      "uname": "润羽露西娅Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389056211,
+      "roomId": 21267062,
+      "uname": "AZKi_Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 412135619,
+      "roomId": 21421141,
+      "uname": "戌神沁音Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 412135222,
+      "roomId": 21420932,
+      "uname": "猫又小粥Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 366690056,
+      "roomId": 21144047,
+      "uname": "樱巫女Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 286179206,
+      "roomId": 8899503,
+      "uname": "时乃空Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389856447,
+      "roomId": 21131813,
+      "uname": "夜空梅露Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 339567211,
+      "roomId": 14275133,
+      "uname": "赤井心Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389862071,
+      "roomId": 21133979,
+      "uname": "大神澪Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389858027,
+      "roomId": 21130785,
+      "uname": "百鬼绫目Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 332704117,
+      "roomId": 11588230,
+      "uname": "白上吹雪Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 336731767,
+      "roomId": 13946381,
+      "uname": "夏色祭Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389857131,
+      "roomId": 21219990,
+      "uname": "亚绮-罗森Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389857640,
+      "roomId": 21132965,
+      "uname": "紫咲诗音Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 20813493,
+      "roomId": 4664126,
+      "uname": "萝卜子Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389859190,
+      "roomId": 21129632,
+      "uname": "大空昴Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 389858754,
+      "roomId": 21107534,
+      "uname": "癒月巧可Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 375504219,
+      "roomId": 14917277,
+      "uname": "湊-阿库娅Official",
+      "organization": [ "hololive" ],
+      "keep": true
+    },
+    {
+      "uid": 456368455,
+      "roomId": 21641569,
+      "uname": "黑桃影",
+      "organization": [ "hololivecn" ],
+      "retire": true
+    },
+    {
+      "uid": 354411419,
+      "roomId": 21618138,
+      "uname": "希薇娅Civia",
+      "organization": [ "hololivecn" ],
+      "retire": true
+    },
+    {
+      "uid": 427061218,
+      "roomId": 21618129,
+      "uname": "夜霧Yogiri",
+      "organization": [ "hololivecn" ],
+      "retire": true
+    },
+    {
+      "uid": 511613155,
+      "roomId": 21908196,
+      "uname": "阿媂娅Artia",
+      "organization": [ "hololivecn" ],
+      "retire": true
+    },
+    {
+      "uid": 511613156,
+      "roomId": 21908209,
+      "uname": "朵莉丝Doris",
+      "organization": [ "hololivecn" ],
+      "retire": true
+    },
+    {
+      "uid": 511613157,
+      "roomId": 21908222,
+      "uname": "罗莎琳Rosalyn",
+      "organization": [ "hololivecn" ],
+      "retire": true
+    },
+    {
+      "uid": 674600646,
+      "roomId": 22503364,
+      "uname": "小鸟游琪亚拉Official",
+      "organization": [ "hololiveen" ],
+      "retire": true
+    },
+    {
+      "uid": 674600647,
+      "roomId": 22503367,
+      "uname": "一伊那尓栖Official",
+      "organization": [ "hololiveen" ],
+      "retire": true
+    },
+    {
+      "uid": 674600649,
+      "roomId": 22503378,
+      "uname": "沃森・艾米莉亚Official",
+      "organization": [ "hololiveen" ],
+      "retire": true
+    },
+    {
+      "uid": 674600648,
+      "roomId": 22503372,
+      "uname": "噶呜・古拉Official",
+      "organization": [ "hololiveen" ],
+      "retire": true
+    },
+    {
+      "uid": 674600645,
+      "roomId": 22503360,
+      "uname": "森美声Official",
+      "organization": [ "hololiveen" ],
+      "retire": true
+    },
+    {
+      "uid": 444316844,
+      "roomId": 21674641,
+      "uname": "holostars",
+      "organization": [ "holostars" ],
+      "retire": true
+    },
+    {
+      "uid": 551114698,
+      "roomId": 22171189,
+      "uname": "阿斯特尔瑞达Official",
+      "organization": [ "holostars" ],
+      "retire": true
+    },
+    {
+      "uid": 551114700,
+      "roomId": 22171183,
+      "uname": "阿尔兰蒂斯Official",
+      "organization": [ "holostars" ],
+      "retire": true
+    },
+    {
+      "uid": 350631685,
+      "roomId": 13009645,
+      "uname": "律可Official",
+      "organization": [ "holostars" ],
+      "retire": true
+    },
+    {
+      "uid": 456232604,
+      "roomId": 21749477,
+      "uname": "奏手一弦Official",
+      "organization": [ "holostars" ],
+      "retire": true
+    }
+  ]
+}

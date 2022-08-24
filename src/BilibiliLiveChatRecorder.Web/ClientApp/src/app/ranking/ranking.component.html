@@ -1,0 +1,252 @@
+<div style="min-width: 1000px; max-width: 1200px;margin: 0 auto">
+  <nz-row nzJustify="start">
+    <nz-col nzSpan="6">
+      <nz-row>
+        <nz-date-picker *ngIf="isDailyRanking" [(ngModel)]="date" [nzDisabledDate]="disabledDate" [nzAllowClear]="false"
+          (ngModelChange)="onDateChange($event)">
+        </nz-date-picker>
+        <nz-month-picker *ngIf="!isDailyRanking" [(ngModel)]="date" [nzDisabledDate]="disabledMonth"
+          [nzAllowClear]="false" (ngModelChange)="onMonthChange($event)">
+        </nz-month-picker>
+      </nz-row>
+      <nz-row>
+        <nz-switch [(ngModel)]="detail" nzCheckedChildren="详" nzUnCheckedChildren="详"></nz-switch>
+      </nz-row>
+    </nz-col>
+    <nz-col nzSpan="18">
+      <nz-spin [nzSpinning]="summaryLoading">
+        <nz-row *ngIf="summary">
+          <nz-col [nzSpan]="detail?4:5">
+            <nz-statistic [nzValue]="summary.data.goldCoin/1000 | number:'1.0-0'" [nzSuffix]="'元'" [nzTitle]="'营收'">
+            </nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="detail?4:5">
+            <nz-statistic [nzValue]="summary.data.goldUser" [nzTitle]="'付费人数'">
+            </nz-statistic>
+          </nz-col>
+          <nz-col *ngIf="detail" [nzSpan]="detail?4:5">
+            <nz-statistic [nzValue]="summary.data.goldUserGreaterThen9" [nzTitle]="'大于9元'">
+            </nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="detail?4:5">
+            <nz-statistic [nzValue]="summary.data.participants" [nzTitle]="'互动人数'">
+            </nz-statistic>
+          </nz-col>
+          <nz-col *ngIf="detail" [nzSpan]="detail?4:5">
+            <nz-statistic [nzValue]="summary.data.realDanmakuUser" [nzTitle]="'发言人数'">
+            </nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="detail?4:5">
+            <nz-statistic [nzValue]="summary.data.realDanmaku" [nzTitle]="'弹幕总数'">
+            </nz-statistic>
+          </nz-col>
+        </nz-row>
+      </nz-spin>
+    </nz-col>
+  </nz-row>
+  <nz-divider style="border-top-color:#f0f0f0" nzText="更新时间：{{summary?.updateTime | date :'yyyy-MM-dd HH:mm'}}">
+  </nz-divider>
+  <div>
+    <nz-row nzJustify="start">
+      <nz-col nzSpan="2"><span>统计方式：</span></nz-col>
+      <nz-col>
+        <nz-radio-group [(ngModel)]="groupBy" [nzButtonStyle]="'solid'" (ngModelChange)="rankingQuerystringNavigate()">
+          <label nz-radio-button nzValue="individual">个人</label>
+          <label nz-radio-button nzValue="organization">组织</label>
+        </nz-radio-group>
+      </nz-col>
+    </nz-row>
+    <br />
+    <nz-row nzJustify="start">
+      <nz-col nzSpan="2"><span>排序：</span></nz-col>
+      <nz-col>
+        <nz-radio-group [(ngModel)]="sortBy" [nzButtonStyle]="'solid'" (ngModelChange)="rankingQuerystringNavigate()">
+          <label nz-radio-button nzValue="participant">互动人数</label>
+          <label nz-radio-button nzValue="income">营收</label>
+          <label nz-radio-button nzValue="paiduser">付费人数</label>
+          <label *ngIf="dataType=='livehistory'" nz-radio-button nzValue="fansincrement">关注增量</label>
+          <label *ngIf="dataType!='livehistory' && dataType!='dailytop'" nz-radio-button nzValue="livetime">直播时长</label>
+        </nz-radio-group>
+      </nz-col>
+    </nz-row>
+    <div *ngIf="groupBy!='organization'">
+      <br />
+      <nz-row nzJustify="start">
+        <nz-col nzSpan="2"><span>数据类型：</span></nz-col>
+        <nz-col>
+          <nz-radio-group [(ngModel)]="dataType" [nzButtonStyle]="'solid'"
+            (ngModelChange)="rankingQuerystringNavigate()">
+            <label nz-radio-button nzValue="total">总和</label>
+            <label nz-radio-button nzValue="livehistory">直播记录</label>
+            <!-- <label *ngIf="!isDailyRanking" nz-radio-button nzValue="dailytop">最高单日</label> -->
+          </nz-radio-group>
+        </nz-col>
+      </nz-row>
+    </div>
+    <div *ngIf="groupBy=='individual'">
+      <br />
+      <nz-row nzJustify="start">
+        <nz-col nzSpan="2"><span>筛选：</span></nz-col>
+        <nz-col>
+          <nz-select style="min-width: 120px;" (nzOnSearch)="onSearch($event)" [(ngModel)]="organization"
+            (ngModelChange)="rankingQuerystringNavigate()" nzShowSearch nzAllowClear nzPlaceHolder="组织">
+            <nz-option [nzValue]="null" nzLabel="全部"></nz-option>
+            <nz-option *ngFor="let org of organizationsOptions;" [nzValue]="org.name" [nzLabel]="org.label">
+            </nz-option>
+          </nz-select>
+        </nz-col>
+      </nz-row>
+    </div>
+    <nz-spin [nzSpinning]="loading">
+      <nz-list *ngIf="dataType!='livehistory'&&data" [nzDataSource]="data.list" [nzRenderItem]="item" nzHeader=" "
+        [nzItemLayout]="'horizontal'">
+        <ng-template #item let-item>
+          <nz-list-item>
+            <nz-list-item-meta [nzTitle]="nzTitle" [nzAvatar]="nzAvatar" [nzDescription]="nzDescription">
+              <ng-template #nzAvatar>
+                <img src="{{item.liver.face||'https://i0.hdslb.com/bfs/face/member/noface.jpg'}}" height="100" />
+              </ng-template>
+              <ng-template #nzDescription>
+                <div>
+                  <nz-row>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.hourOfLive | number:'1.0-1'" [nzSuffix]="'小时'"
+                        [nzTitle]="'直播时长'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.goldCoin/1000 | number:'1.0-0'" [nzSuffix]="'元'"
+                        [nzTitle]="'营收'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.goldUser" [nzTitle]="'付费人数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col *ngIf="detail" [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.goldUserGreaterThen9" [nzTitle]="'大于9元'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.participants" [nzTitle]="'互动人数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col *ngIf="detail" [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.realDanmakuUser" [nzTitle]="'发言人数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.realDanmaku" [nzTitle]="'弹幕总数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4" *ngIf="item.data.maxPopularity">
+                      <nz-statistic [nzValue]="item.data.maxPopularity" [nzTitle]="'人气峰值'">
+                      </nz-statistic>
+                    </nz-col>
+                  </nz-row>
+                </div>
+              </ng-template>
+              <ng-template #nzTitle>
+                <nz-row nzJustify="space-between">
+                  <nz-col [nzSpan]="6">
+                    <a [ngStyle]="{'pointer-events': item.liver.roomId?'auto':'none'}" target="_blank"
+                      (click)="$event.stopPropagation()"
+                      href="https://live.bilibili.com/{{item.liver.roomId}}">{{ item.liver.name }}</a>
+                  </nz-col>
+                  <nz-col>
+                    <div *ngIf="!isDailyRanking&&item.data.lastLiveTime">
+                      <span *ngIf="dataType!='dailytop'">
+                        最近开播时间：{{item.data.lastLiveTime | date : 'yyyy-MM-dd HH:mm'}}</span>
+                      <span *ngIf="dataType=='dailytop'">
+                        日期：{{item.data.lastLiveTime | date : 'yyyy-MM-dd'}}</span>
+                    </div>
+                  </nz-col>
+                </nz-row>
+              </ng-template>
+            </nz-list-item-meta>
+          </nz-list-item>
+        </ng-template>
+      </nz-list>
+      <nz-list *ngIf="dataType=='livehistory'&&data" [nzDataSource]="data.list" [nzRenderItem]="item"
+        [nzHeader]="header" [nzItemLayout]="'horizontal'">
+        <ng-template #header>
+          <label nz-checkbox [(ngModel)]="distinct" (ngModelChange)="rankingQuerystringNavigate()">单人只显示最高记录</label>
+        </ng-template>
+        <ng-template #item let-item>
+          <nz-list-item>
+            <nz-list-item-meta [nzTitle]="nzTitle" [nzAvatar]="nzAvatar" [nzDescription]="nzDescription">
+              <ng-template #nzAvatar>
+                <img
+                  src="{{item.data.cover || 'https://s1.hdslb.com/bfs/static/blive/live-assets/common/images/no-cover.png'}}"
+                  width="178" height="100" />
+              </ng-template>
+              <ng-template #nzDescription>
+                <div>
+                  <nz-row>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.hourOfLive | number:'1.0-1'" [nzSuffix]="'小时'"
+                        [nzTitle]="'直播时长'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.goldCoin/1000 | number:'1.0-0'" [nzSuffix]="'元'"
+                        [nzTitle]="'营收'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.goldUser" [nzTitle]="'付费人数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col *ngIf="detail" [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.goldUserGreaterThen9" [nzTitle]="'大于9元'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.participants" [nzTitle]="'互动人数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col *ngIf="detail" [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.realDanmakuUser" [nzTitle]="'发言人数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <nz-col [nzSpan]="detail?3:4">
+                      <nz-statistic [nzValue]="item.data.realDanmaku" [nzTitle]="'弹幕总数'">
+                      </nz-statistic>
+                    </nz-col>
+                    <!-- <nz-col [nzSpan]="detail?3:4" *ngIf="item.data.fansIncrement">
+                                            <nz-statistic [nzValue]="item.data.fansIncrement" [nzTitle]="'关注增量'">
+                                            </nz-statistic>
+                                        </nz-col> -->
+                    <nz-col [nzSpan]="detail?3:4" *ngIf="item.data.maxPopularity">
+                      <nz-statistic [nzValue]="item.data.maxPopularity" [nzTitle]="'人气峰值'">
+                      </nz-statistic>
+                    </nz-col>
+                  </nz-row>
+                </div>
+              </ng-template>
+              <ng-template #nzTitle>
+                <nz-row nzJustify="space-between">
+                  <nz-col [nzSpan]="12">
+                    <span>{{item.data.title}}</span>
+                    <span [style.color]="item.data.fansIncrement>=0?'#00da3c':'#ec0000'" title='关注增量'>
+                      <!-- <i nz-icon nzType="heart" nzTheme="fill" style="color: hotpink;"></i> -->
+                      {{item.data.fansIncrement>=0?'+'+item.data.fansIncrement:item.data.fansIncrement}}</span>
+                  </nz-col>
+                  <nz-col>
+                    <a [ngStyle]="{'pointer-events': item.liver.roomId?'auto':'none'}" target="_blank"
+                      (click)="$event.stopPropagation()"
+                      href="https://live.bilibili.com/{{item.liver.roomId}}">{{ item.liver.name }}</a>
+
+                    <span *ngIf="item.data.startTime">
+                      开播时间：{{item.data.startTime | date : 'yyyy-MM-dd HH:mm'}}
+                    </span>
+                  </nz-col>
+                </nz-row>
+              </ng-template>
+            </nz-list-item-meta>
+          </nz-list-item>
+        </ng-template>
+      </nz-list>
+    </nz-spin>
+  </div>
+</div>

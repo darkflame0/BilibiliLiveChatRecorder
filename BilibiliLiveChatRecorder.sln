@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveChatRecorder.Transport", "src\BilibiliLiveChatRecorder.Transport\BilibiliLiveChatRecorder.Transport.csproj", "{3751FC25-0881-4F86-8134-EDE9B3822A88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveChatRecorder.DbModel", "src\BilibiliLiveChatRecorder.DbModel\BilibiliLiveChatRecorder.DbModel.csproj", "{23533075-B554-42EB-8C83-AB3C0B6D37D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveChatRecorder.Background", "src\BilibiliLiveChatRecorder.Background\BilibiliLiveChatRecorder.Background.csproj", "{F63C2A15-F1D5-45C8-954A-8CCC50F44AC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveChatRecorder.Core", "src\BilibiliLiveChatRecorder.Core\BilibiliLiveChatRecorder.Core.csproj", "{2B0BA006-42AD-417B-8969-FC4760883701}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{89941DA6-1BE3-4922-A99C-572BB4C013F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveChatRecorder.Api", "src\BilibiliLiveChatRecorder.Api\BilibiliLiveChatRecorder.Api.csproj", "{E0DBFE73-2362-4414-A0AC-8640611EADAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveChatRecorder.Job", "src\BilibiliLiveChatRecorder.Job\BilibiliLiveChatRecorder.Job.csproj", "{1070EBF7-199E-4A3D-8864-5C1123216720}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{590704B6-FD40-4C63-BC45-D580EE04D430}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveChatRecorder.Statistics", "src\BilibiliLiveChatRecorder.Statistics\BilibiliLiveChatRecorder.Statistics.csproj", "{277B8831-1323-4582-9DA5-D88300AF11D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BilibiliLiveApi", "src\BilibiliLiveApi\BilibiliLiveApi.csproj", "{1C4D278A-B945-445B-95BB-4293A34BAD9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3751FC25-0881-4F86-8134-EDE9B3822A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3751FC25-0881-4F86-8134-EDE9B3822A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3751FC25-0881-4F86-8134-EDE9B3822A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3751FC25-0881-4F86-8134-EDE9B3822A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23533075-B554-42EB-8C83-AB3C0B6D37D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23533075-B554-42EB-8C83-AB3C0B6D37D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23533075-B554-42EB-8C83-AB3C0B6D37D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23533075-B554-42EB-8C83-AB3C0B6D37D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F63C2A15-F1D5-45C8-954A-8CCC50F44AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F63C2A15-F1D5-45C8-954A-8CCC50F44AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F63C2A15-F1D5-45C8-954A-8CCC50F44AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F63C2A15-F1D5-45C8-954A-8CCC50F44AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B0BA006-42AD-417B-8969-FC4760883701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B0BA006-42AD-417B-8969-FC4760883701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B0BA006-42AD-417B-8969-FC4760883701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B0BA006-42AD-417B-8969-FC4760883701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0DBFE73-2362-4414-A0AC-8640611EADAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0DBFE73-2362-4414-A0AC-8640611EADAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0DBFE73-2362-4414-A0AC-8640611EADAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0DBFE73-2362-4414-A0AC-8640611EADAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1070EBF7-199E-4A3D-8864-5C1123216720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1070EBF7-199E-4A3D-8864-5C1123216720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1070EBF7-199E-4A3D-8864-5C1123216720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1070EBF7-199E-4A3D-8864-5C1123216720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277B8831-1323-4582-9DA5-D88300AF11D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277B8831-1323-4582-9DA5-D88300AF11D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277B8831-1323-4582-9DA5-D88300AF11D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277B8831-1323-4582-9DA5-D88300AF11D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C4D278A-B945-445B-95BB-4293A34BAD9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C4D278A-B945-445B-95BB-4293A34BAD9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C4D278A-B945-445B-95BB-4293A34BAD9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C4D278A-B945-445B-95BB-4293A34BAD9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3751FC25-0881-4F86-8134-EDE9B3822A88} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+		{23533075-B554-42EB-8C83-AB3C0B6D37D5} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+		{F63C2A15-F1D5-45C8-954A-8CCC50F44AC6} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+		{2B0BA006-42AD-417B-8969-FC4760883701} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+		{E0DBFE73-2362-4414-A0AC-8640611EADAD} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+		{1070EBF7-199E-4A3D-8864-5C1123216720} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+		{277B8831-1323-4582-9DA5-D88300AF11D2} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+		{1C4D278A-B945-445B-95BB-4293A34BAD9F} = {89941DA6-1BE3-4922-A99C-572BB4C013F0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE661FC0-0BCF-4BCD-964C-E6F88F585F65}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,58 @@
+<nz-back-top></nz-back-top>
+<div style="max-width: 1086px;margin: 0 auto;">
+  <div nz-row nzGutter="16" nzJustify="space-between">
+    <div style="display: flex; justify-content:center;" nz-col>
+      <nz-input-group style="width: 240px; margin-bottom: 20px;" [nzSuffix]="suffixIconSearch">
+        <input #searchInput type="text" nz-input [(ngModel)]="search" />
+      </nz-input-group>
+      <ng-template #inputClearTpl><i nz-icon class="ant-input-clear-icon" nzTheme="fill" nzType="close-circle"
+          (click)="search = '';searchInput.focus();"></i></ng-template>
+      <ng-template #suffixIconSearch>
+        <i *ngIf="!search;else inputClearTpl" nz-icon nzType="search"></i>
+      </ng-template>
+    </div>
+    <div nz-col style="margin-bottom: 20px;margin-right: 15px;">
+      <nz-switch [(ngModel)]="showKeyframe" nzCheckedChildren="关键帧" nzUnCheckedChildren="关键帧"></nz-switch>
+    </div>
+  </div>
+  <div [style.height.px]="scrollHeight">
+    <nz-list [nzLoading]="loading" nzGrid>
+      <virtual-scroller #scroll [items]="rooms" [parentScroll]="scroll.window" (vsEnd)="vsChange($event)">
+        <div nz-row nzGutter="16" #container>
+          <div style="display: flex; justify-content:space-between;" nz-col [nzLg]="6" [nzMd]="8" [nzSm]="12"
+            [nzXs]="24" *ngFor="let item of scroll.viewPortItems;trackBy: trackByRooms">
+            <nz-list-item>
+              <nz-card nzHoverable style="width:240px;" [nzCover]="coverTemplate" (click)="showModal(item)">
+                <nz-card-meta [nzTitle]="titleTemplate" [nzDescription]="descriptionTemplate"></nz-card-meta>
+                <ng-template #titleTemplate>
+                  <a target="_blank" (click)="$event.stopPropagation()"
+                    href="https://live.bilibili.com/{{item.roomId}}">
+                    <span style="display: inline-block;width: 100%;" title="{{item.title}}">{{item.title}}</span></a>
+                </ng-template>
+                <ng-template #descriptionTemplate> <a style="display: inline-block;max-width: 72%;" target="_blank"
+                    (click)="$event.stopPropagation()" nz-typography nzEllipsis
+                    href="https://space.bilibili.com/{{item.uid}}">{{item.uname}}</a>
+                  <span (click)="$event.stopPropagation()" nz-tooltip nzTooltipTitle='十分钟互动人数' style="float:right"><i
+                      nz-icon [nzType]="'user'"></i>{{item.participantDuring10Min}}</span>
+                </ng-template>
+                <ng-template #coverTemplate>
+                  <div class="hover-image">
+                    <img [src]="getUserCover(item).replace('http://','https://')" class="cover" />
+                    <img [src]="getUserCover(item).replace('http://','https://')"
+                      (mouseenter)="$event.target.src=getUserCover(item,true).replace('http://','https://');"
+                      class="cover hover" />
+                  </div>
+                </ng-template>
+              </nz-card>
+            </nz-list-item>
+          </div>
+        </div>
+      </virtual-scroller>
+    </nz-list>
+  </div>
+</div>
+<app-statistic-modal *ngFor="let selectedRoom of selectedRooms; trackBy: trackByRooms" [index]="selectedRoom.index"
+  (click)="onModalMouseDown(selectedRoom)" [(isVisible)]="modalVisible[selectedRoom.roomId]"
+  [room]="selectedRoom.roomInfo" [data$]="getRoomData$(selectedRoom.roomId)" (onShow)="onRoomShow(selectedRoom)"
+  (onHidden)="onRoomHidden(selectedRoom.roomId)" (onDestroy)="onRoomDestroy(selectedRoom.roomId)">
+</app-statistic-modal>

@@ -1,0 +1,83 @@
+<nz-modal #modal nzNoAnimation [nzMask]="false" [nzFooter]="null" [nzContent]="modalContent" [(nzVisible)]="isVisible"
+  (nzOnCancel)="handleCancel()" [nzTitle]="modalTitle" [nzZIndex]="index+100">
+  <ng-template #modalTitle>
+    <div cdkDrag cdkDragRootElement=".ant-modal">
+      <div cdkDragHandle class="modal-title-inner">
+        <span class="live-title">{{(title? (title+' - '):'')+uname}}</span>
+        <div *ngIf="participantDuring10Min" nz-tooltip nzTooltipTitle='十分钟互动人数' style="white-space:nowrap;z-index: 2;">
+          <i nz-icon [nzType]="'user'"></i>
+          <span style="align-self:auto; padding-right: 20px;">
+            {{ participantDuring10Min}}</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <ng-template #modalContent>
+    <nz-spin [nzSpinning]="!data">
+      <div *ngIf="data">
+        <nz-row [nzGutter]="16">
+          <nz-col [nzSpan]="12">
+            <nz-statistic [nzValue]="data.endTime | date :'yyyy-MM-dd HH:mm:ss'" [nzTitle]="'更新时间'">
+            </nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="12">
+            <nz-statistic [nzValue]="data.startTime | date :'yyyy-MM-dd HH:mm:ss'" [nzTitle]="'开始时间'">
+            </nz-statistic>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="16">
+          <nz-col [nzSpan]="12">
+            <nz-statistic [nzValue]="data.popularity" [nzTitle]="'人气值'"></nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="12">
+            <nz-statistic [nzValue]="data.maxPopularity" [nzTitle]="'人气峰值'"></nz-statistic>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="16">
+          <nz-col [nzSpan]="24">
+            <nz-statistic [nzValue]="data.participants" [nzTitle]="participantsTitle"></nz-statistic>
+            <ng-template #participantsTitle><span nz-tooltip nzTooltipTitle="送礼、发言的人数，不含抽奖">互动人数</span></ng-template>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="16">
+          <nz-col [nzSpan]="6">
+            <nz-statistic [nzValue]="data.goldUser" [nzTitle]="'付费人数'"></nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="6">
+            <nz-statistic [nzValue]="data.danmakuUser" [nzTitle]="'发言人数'"></nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="6">
+            <nz-statistic [nzValue]="data.silverUser" [nzTitle]="'银瓜子人数'"></nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="6">
+            <nz-statistic [nzValue]="data.giftDanmakuUser" [nzTitle]="giftDanmakuUserTitle"></nz-statistic>
+            <ng-template #giftDanmakuUserTitle><span nz-tooltip nzTooltipTitle="已互动过的人不计算在内">抽奖弹幕人数</span></ng-template>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="16">
+          <nz-col [nzSpan]="12">
+            <nz-statistic [nzValue]="data.realDanmaku" [nzTitle]="'真实弹幕数'"></nz-statistic>
+          </nz-col>
+          <nz-col [nzSpan]="12">
+            <nz-statistic [nzValue]="data.giftDanmaku" [nzTitle]="'抽奖弹幕数'"></nz-statistic>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="16">
+          <nz-col [nzSpan]="24">
+            <nz-statistic [nzValue]="data.goldCoin/100" [nzTitle]="'电池'"></nz-statistic>
+          </nz-col>
+        </nz-row>
+        <nz-row [nzGutter]="16">
+          <nz-col [nzSpan]="24">
+            <nz-statistic [nzValue]="data.fansIncrement" [nzTitle]="'关注增量'"></nz-statistic>
+          </nz-col>
+        </nz-row>
+      </div>
+    </nz-spin>
+  </ng-template>
+  <ng-template #modalFooter>
+    <div style="min-height:32px">
+    </div>
+  </ng-template>
+</nz-modal>

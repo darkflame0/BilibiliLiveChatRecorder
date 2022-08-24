@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Darkflame.BilibiliLiveChatRecorder.Api</AssemblyName>
+    <RootNamespace>Darkflame.BilibiliLiveChatRecorder.Api</RootNamespace>
+    <UserSecretsId>ee005c11-103e-4f16-802c-ab2f1b6c70a9</UserSecretsId>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Compile Include="..\BilibiliLiveChatRecorder.Shared.Options\LiverOptions.cs" Link="Options\LiverOptions.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\BilibiliLiveApi\BilibiliLiveApi.csproj" />
+    <ProjectReference Include="..\BilibiliLiveChatRecorder.DbModel\BilibiliLiveChatRecorder.DbModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="EasyCaching.InMemory" Version="1.4.1" />
+    <PackageReference Include="EasyCaching.Interceptor.AspectCore" Version="1.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.*" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.*">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Polly" Version="7.2.2" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="6.1.15" />
+    <PackageReference Include="Refit.Newtonsoft.Json" Version="6.1.15" />
+  </ItemGroup>
+</Project>

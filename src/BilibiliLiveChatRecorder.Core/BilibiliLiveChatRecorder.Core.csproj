@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Darkflame.BilibiliLiveChatRecorder.Core</AssemblyName>
+    <RootNamespace>Darkflame.BilibiliLiveChatRecorder.Core</RootNamespace>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+</Project>

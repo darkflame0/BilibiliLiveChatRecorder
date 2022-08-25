@@ -44,6 +44,7 @@ namespace Darkflame.BilibiliLiveApi
         private BilbiliApiOptions _apiOptins;
         private BilbiliApiUrlOptions _urlOptions => _apiOptins.Urls;
         private IDisposable _disposeOptions;
+        private readonly ParallelOptions ParallelOptions = new() { MaxDegreeOfParallelism = 8 };
 #nullable disable warnings
         public async Task<bool> GetLiveStatus(int roomId)
         {
@@ -64,7 +65,7 @@ namespace Darkflame.BilibiliLiveApi
         {
             try
             {
-                var r = await Task.WhenAll(uids.Chunk(300).Select(a => GetLiveRoomByUidCore(a))).ConfigureAwait(false);
+                var r = await ParallelEx.WhenAll(uids.Chunk(300), ParallelOptions, async (a, _) => await GetLiveRoomByUidCore(a)).ConfigureAwait(false);
                 _412Set.Remove(nameof(GetLiveRoomByUid), out _);
                 return r.SelectMany(a => a).ToList();
             }
@@ -175,7 +176,7 @@ namespace Darkflame.BilibiliLiveApi
         }
         public async Task<IEnumerable<(int RoomId, LiveInfo LiveInfo)>> GetLiveInfo(IEnumerable<int> roomIds)
         {
-            var r = await Task.WhenAll(roomIds.Chunk(300).Select(a => GetLiveInfoCore(a))).ConfigureAwait(false);
+            var r = await ParallelEx.WhenAll(roomIds.Chunk(300), ParallelOptions, (a, _) => GetLiveInfoCore(a)).ConfigureAwait(false);
             return r.SelectMany(a => a).ToList();
         }
         public async Task<IEnumerable<(int RoomId, LiveInfo LiveInfo)>> GetLiveInfoCore(IEnumerable<int> roomIds)
@@ -298,7 +299,7 @@ namespace Darkflame.BilibiliLiveApi
 
         public async Task<IEnumerable<LiverInfo>> GetLiverInfo(IEnumerable<int> roomIds)
         {
-            var r = await Task.WhenAll(roomIds.Chunk(300).Select(a => GetLiverInfoCore(a))).ConfigureAwait(false);
+            var r = await ParallelEx.WhenAll(roomIds.Chunk(300), ParallelOptions, (a, _) => GetLiverInfoCore(a)).ConfigureAwait(false);
             return r.SelectMany(a => a).ToList();
         }
         private async Task<IEnumerable<LiverInfo>> GetLiverInfoCore(IEnumerable<int> roomIds)
@@ -315,7 +316,7 @@ namespace Darkflame.BilibiliLiveApi
         }
         public async Task<IEnumerable<LiverInfo>> GetLiverInfoByUid(IEnumerable<long> uids)
         {
-            var r = await Task.WhenAll(uids.Chunk(300).Select(a => GetLiverInfoByUidCore(a))).ConfigureAwait(false);
+            var r = await ParallelEx.WhenAll(uids.Chunk(300),ParallelOptions,(a,_) => GetLiverInfoByUidCore(a)).ConfigureAwait(false);
             return r.SelectMany(a => a).ToList();
         }
         private async Task<IEnumerable<LiverInfo>> GetLiverInfoByUidCore(IEnumerable<long> uids)
@@ -500,7 +501,7 @@ namespace Darkflame.BilibiliLiveApi
         }
         public async Task<IEnumerable<(long Uid, int RoomId)>> GetRoomIdByUid(IEnumerable<long> uids)
         {
-            var r = await Task.WhenAll(uids.Chunk(300).Select(a => GetRoomIdByUidCore(a))).ConfigureAwait(false);
+            var r = await ParallelEx.WhenAll(uids.Chunk(300), ParallelOptions, (a, _) => GetRoomIdByUidCore(a)).ConfigureAwait(false);
             return r.SelectMany(a => a).ToList();
         }
 
@@ -520,7 +521,7 @@ namespace Darkflame.BilibiliLiveApi
 
         public async Task<IEnumerable<(int RoomId, int ShortId, bool Live)>> GetRoomInit(IEnumerable<int> roomIds)
         {
-            var r = await Task.WhenAll(roomIds.Chunk(300).Select(a => GetRoomInitCore(a))).ConfigureAwait(false);
+            var r = await ParallelEx.WhenAll(roomIds.Chunk(300), ParallelOptions, (a, _) => GetRoomInitCore(a)).ConfigureAwait(false);
             return r.SelectMany(a => a).ToList();
         }
 
@@ -560,7 +561,7 @@ namespace Darkflame.BilibiliLiveApi
 
         public async Task<IEnumerable<UserInfo>> GetUserInfo(IEnumerable<long> uids)
         {
-            var r = await Task.WhenAll(uids.Chunk(300).Select(a => GetUserInfoCore(a))).ConfigureAwait(false);
+            var r = await ParallelEx.WhenAll(uids.Chunk(300), ParallelOptions, (a, _) => GetUserInfoCore(a)).ConfigureAwait(false);
             return r.SelectMany(a => a).ToList();
         }
 

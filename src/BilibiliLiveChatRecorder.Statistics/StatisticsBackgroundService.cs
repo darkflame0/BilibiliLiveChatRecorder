@@ -53,7 +53,7 @@ namespace Darkflame.BilibiliLiveChatRecorder.Statistics
             }
             public int RoomId { get; set; }
             public RoomData? Room { get; set; }
-            public ConcurrentDictionary<long, DateTime> Participants10Min { get; set; } = new ();
+            public ConcurrentDictionary<long, DateTime> Participants10Min { get; set; } = new();
             public IDictionary<long, int> IncomeDic => Room?.GoldUser ?? new Dictionary<long, int>(0);
 
             public RoomStatistic Statistics { get; } = new RoomStatistic();
@@ -155,7 +155,7 @@ namespace Darkflame.BilibiliLiveChatRecorder.Statistics
                 var cmd = msg.Raw["cmd"].Value<string>();
                 if (cmd.StartsWith(Cmd.Danmaku))
                 {
-                    var uid = msg.Raw["info"][2][0].Value<int>();
+                    var uid = msg.Raw["info"][2][0].Value<long>();
                     if (msg.Raw["info"][0][9].Value<int>() > 0)
                     {
                         ++Room.GiftDanmaku;

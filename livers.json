@@ -1828,6 +1828,33 @@
       "keep": true
     },
     {
+      "uid": 1954091502,
+      "roomId": 25788785,
+      "uname": "岁己SUI",
+      "organization": [
+        "virtuareal"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1739085910,
+      "roomId": 25788830,
+      "uname": "江乱Era",
+      "organization": [
+        "virtuareal"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1116072703,
+      "roomId": 25788858,
+      "uname": "莱恩Leo",
+      "organization": [
+        "virtuareal"
+      ],
+      "keep": true
+    },
+    {
       "uid": 1484169431,
       "roomId": 23805029,
       "uname": "雾深Girimi",
@@ -2287,6 +2314,42 @@
       "roomId": 22697162,
       "uname": "P-SP",
       "organization": [ "p-sp" ],
+      "keep": true
+    },
+    {
+      "uid": 438848253,
+      "roomId": 21545805,
+      "uname": "盲盲Memo",
+      "organization": [
+        "p-sp"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1703797642,
+      "roomId": 22966160,
+      "uname": "李豆沙_Channel",
+      "organization": [
+        "p-sp"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 435243735,
+      "roomId": 23222837,
+      "uname": "礼墨Sumi",
+      "organization": [
+        "p-sp"
+      ],
+      "keep": true
+    },
+    {
+      "uid": 1041474702,
+      "roomId": 22953950,
+      "uname": "病院坂Rei",
+      "organization": [
+        "p-sp"
+      ],
       "keep": true
     },
     {

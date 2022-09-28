@@ -51,6 +51,10 @@ services.AddOptions<AutoKeepOptions>().PostConfigure<IBilibiliLiveApi>((op, api)
 });
 services.Configure<LiverOptions>(configuration);
 services.AddOptions<LiverOptions>();
+if (!string.IsNullOrEmpty(configuration["ChatMessageTableName"]))
+{
+    LiveChatDbContext.ChatMessageTableName = configuration["ChatMessageTableName"];
+}
 services
 .AddDbContextPool<LiveChatDbContext>(
     op =>
@@ -60,6 +64,7 @@ services
         op.UseNpgsql(configuration.GetConnectionString("LiveChatDb"));
     }
     , poolSize: 128)
+.AddSingleton<IPersistenceService, PersistenceService>()
 .AddHostedService<LiveChatBackgroundService>();
 services.AddSingleton(s => s.GetRequiredService<IEnumerable<IHostedService>>().OfType<LiveChatBackgroundService>().Single());
 services.Configure<BilbiliApiOptions>(configuration.GetSection("BiliApi"));

@@ -1,26 +1,12 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net.WebSockets;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+﻿using System.Collections.Concurrent;
 using Darkflame.BilibiliLiveApi;
 using Darkflame.BilibiliLiveChatRecorder.Background.Options;
 using Darkflame.BilibiliLiveChatRecorder.DbModel;
-using Darkflame.BilibiliLiveChatRecorder.Transport;
 using Darkflame.BilibiliLiveChatRecorder.Options;
+using Darkflame.BilibiliLiveChatRecorder.Transport;
 using EasyNetQ;
-using EasyNetQ.Topology;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 
@@ -34,11 +20,10 @@ namespace Darkflame.BilibiliLiveChatRecorder.Background
         private readonly IDistributedCache _cache;
         private readonly IBilibiliLiveApi _bilibiliLiveApi;
         private readonly IServiceProvider _serviceProvider;
+        private readonly IPersistenceService _persistenceService;
         private readonly IBus _bus;
         private readonly ILogger<LiveChatBackgroundService> _logger;
         private readonly IHostApplicationLifetime _lifetime;
-        private readonly Channel<ChatMessage> _messageBuffer = Channel.CreateUnbounded<ChatMessage>(new UnboundedChannelOptions() { SingleReader = true });
-        private Channel<ChatMessage> _fallbackMessageBuffer = Channel.CreateUnbounded<ChatMessage>(new UnboundedChannelOptions() { SingleReader = true });
         private HashSet<int> _excludeRooms = new();
         private IEnumerable<(int RoomId, long Uid)> _specificRooms = Enumerable.Empty<(int RoomId, long Uid)>();
         private readonly CancellationTokenSource _cts = new();
@@ -51,6 +36,7 @@ namespace Darkflame.BilibiliLiveChatRecorder.Background
             _cache = cache;
             _bilibiliLiveApi = bilibiliLiveApi;
             _serviceProvider = serviceProvider.CreateScope().ServiceProvider;
+            _persistenceService = _serviceProvider.GetRequiredService<IPersistenceService>();
             _bus = bus;
             _logger = logger;
             _lifetime = lifetime;
@@ -72,8 +58,8 @@ namespace Darkflame.BilibiliLiveChatRecorder.Background
             _logger.LogDebug("服务已启动");
             await OnRoomOptionsChange(_roomOptions);
             await OnLiverOptionsChange(_liverOptions);
+            _ = _persistenceService.StartAsync();
             await Task.WhenAll(
-                PersistLoop(stoppingToken),
                 Loop(stoppingToken)
                 );
         }
@@ -372,317 +358,12 @@ namespace Darkflame.BilibiliLiveChatRecorder.Background
             async Task ProcessMessage((DateTime Time, JToken Raw) msg)
             {
                 var chat = new ChatMessage(client.RealRoomId, msg.Time, msg.Raw);
-                await _messageBuffer.Writer.WriteAsync(chat, CancellationToken.None);
+                await _persistenceService.SaveAsync(chat);
                 if (_bus.Advanced.IsConnected)
                 {
                     _ = _bus.PubSub.PublishAsync(chat, $"{chat.RoomId}.{chat.Raw["cmd"]}", CancellationToken.None);
                 }
             }
-        }
-        static readonly string PersistentQName = $"{nameof(ChatMessage)}.persistent";
-        ulong _lastDeliveryTag = 0;
-        private async Task PersistLoop(CancellationToken cancellationToken = default)
-        {
-            IPullingConsumer<PullResult<ChatMessage>>? persistentBus = null;
-            IPullingConsumer<PullResult>? persistentBusNonG = null;
-            Queue persistentQ = default;
-            var reconnecting = false;
-            async Task<bool> TryConnect()
-            {
-                if (reconnecting)
-                {
-                    return false;
-                }
-                try
-                {
-                    reconnecting = true;
-                    await _bus.Advanced.ConnectAsync();
-                }
-                catch
-                {
-                    return false;
-                }
-                finally
-                {
-                    reconnecting = false;
-                }
-                return true;
-            }
-            async Task<ulong> EnsureQueueAndGetQueueCount()
-            {
-                if (!_bus.Advanced.IsConnected)
-                {
-                    _ = TryConnect();
-                    return 0;
-                }
-                try
-                {
- getstats:
-                    if (persistentBus != null)
-                    {
-                        try
-                        {
-                            var stats = await _bus.Advanced.GetQueueStatsAsync(PersistentQName);
-                            return stats.MessagesCount;
-                        }
-                        catch (Exception e)
-                        {
-                            _logger.LogError(e, "队列状态获取失败");
-                        }
-                    }
-                    persistentQ = _bus.Advanced.QueueDeclare(PersistentQName, CancellationToken.None);
-                    var t1 = Interlocked.Exchange(ref persistentBusNonG, _bus.Advanced.CreatePullingConsumer(persistentQ, autoAck: false));
-                    var t2 = Interlocked.Exchange(ref persistentBus, _bus.Advanced.CreatePullingConsumer<ChatMessage>(persistentQ, autoAck: false));
-                    t1?.Dispose();
-                    t2?.Dispose();
-                    goto getstats;
-                }
-                catch (Exception e)
-                {
-                    _logger.LogError(e.ToString());
-                }
-                return 0;
-            }
-            _bus.Advanced.Connected += (s, e) =>
-            {
-                _ = EnsureQueueAndGetQueueCount();
-            };
-            _bus.Advanced.Disconnected += (s, e) =>
-            {
-                var t1 = Interlocked.Exchange(ref persistentBusNonG, null);
-                var t2 = Interlocked.Exchange(ref persistentBus, null);
-                t1?.Dispose();
-                t2?.Dispose();
-            };
-            try
-            {
-                var db = _serviceProvider.GetRequiredService<LiveChatDbContext>();
-                while (!cancellationToken.IsCancellationRequested)
-                {
-                    try
-                    {
-                        await Task.Delay(1000, cancellationToken);
-                        await PersistCore(cancellationToken);
-
-                    }
-                    catch (TaskCanceledException)
-                    {
-                    }
-                    catch (Exception e)
-                    {
-                        _logger.LogError(e.ToString());
-                    }
-                }
-                var list = Enumerable.Empty<ChatMessage>();
-                if (_bus.Advanced.IsConnected)
-                {
-                    if (_fallbackMessageBuffer.Reader.TryReadAll(out list) != 0)
-                    {
-                        await AddToFallback(list);
-                    }
-                    if (_messageBuffer.Reader.TryReadAll(out list) != 0)
-                    {
-                        await AddToQ(list);
-                    }
-                }
-                else
-                {
-                    if (_fallbackMessageBuffer.Reader.TryReadAll(out list) != 0)
-                    {
-                        await SaveToDb(list);
-                    }
-                    if (_messageBuffer.Reader.TryReadAll(out list) != 0)
-                    {
-                        await SaveToDb(list);
-                    }
-                }
-                async Task PersistCore(CancellationToken cancellationToken = default)
-                {
-                    var list = Enumerable.Empty<ChatMessage>();
-                    try
-                    {
-                        while (!cancellationToken.IsCancellationRequested)
-                        {
-                            var queueBatchSize = _roomOptions.QueueBatchSize;
-                            if (_fallbackMessageBuffer.Reader.TryReadAll(out list, queueBatchSize) != 0)
-                            {
-                                if (!_fallbackMessageBuffer.Reader.TryPeek(out _))
-                                {
-                                    _fallbackMessageBuffer.Writer.TryComplete();
-                                    _fallbackMessageBuffer = Channel.CreateUnbounded<ChatMessage>(new UnboundedChannelOptions() { SingleReader = true });
-                                }
-                                await SaveToDb(list);
-                            }
-                            else if (await EnsureQueueAndGetQueueCount() > 0)
-                            {
-                                var msgs = new List<PullResult<ChatMessage>>(queueBatchSize);
-                                var i = 0;
-                                PullResult<ChatMessage> msg;
-                                try
-                                {
-                                    try
-                                    {
-                                        if (msgs.Capacity != 0)
-                                        {
-                                            while (i < msgs.Capacity)
-                                            {
-                                                msg = await persistentBus!.PullAsync(cancellationToken);
-                                                if (!msg.IsAvailable)
-                                                {
-                                                    break;
-                                                }
-                                                ++i;
-                                                _lastDeliveryTag = msg.ReceivedInfo.DeliveryTag;
-                                                msgs.Add(msg);
-                                            }
-                                            await SaveToDb(msgs.Select(a => a.Message.Body));
-                                            await persistentBus.AckBatchAsync(_lastDeliveryTag, CancellationToken.None);
-                                        }
-                                    }
-                                    catch (Newtonsoft.Json.JsonReaderException e) when (e.Message.Contains("Unexpected character encountered while parsing value:"))
-                                    {
-                                        if (msgs.Any())
-                                        {
-                                            await SaveToDb(msgs.Select(a => a.Message.Body));
-                                            msgs.Clear();
-                                            await persistentBus.AckBatchAsync(_lastDeliveryTag, CancellationToken.None);
-                                        }
-                                        await persistentBus.RejectBatchAsync(++_lastDeliveryTag, true, CancellationToken.None);
-                                        var errMsg = await persistentBusNonG!.PullAsync(CancellationToken.None);
-                                        _logger.LogError($"error msg:{Encoding.UTF8.GetString(errMsg.Body.Span)}\nbase64:{Convert.ToBase64String(errMsg.Body.Span)}");
-                                        await persistentBusNonG.RejectAsync(errMsg.ReceivedInfo.DeliveryTag, true, CancellationToken.None);
-                                    }
-                                }
-                                catch (Exception)
-                                {
-                                    if (msgs.Any())
-                                    {
-                                        await persistentBus.RejectBatchAsync(_lastDeliveryTag, true, CancellationToken.None);
-                                    }
-                                    throw;
-                                }
-                                if (msgs.Count == msgs.Capacity && _messageBuffer.Reader.TryReadAll(out list) != 0)
-                                {
-                                    await AddToQ(list);
-                                }
-                            }
-                            else
-                            {
-                                if (_messageBuffer.Reader.TryReadAll(out list, queueBatchSize) is var size && size != 0)
-                                {
-                                    await SaveToDb(list);
-                                    if (size == queueBatchSize && _messageBuffer.Reader.TryReadAll(out list) != 0)
-                                    {
-                                        await AddToQ(list);
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    catch
-                    {
-                        await AddToFallback(list);
-                        if (_bus.Advanced.IsConnected && _messageBuffer.Reader.TryReadAll(out list) != 0)
-                        {
-                            await AddToQ(list);
-                        }
-                        throw;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.ToString());
-                _lifetime.StopApplication();
-            }
-
-            async Task AddToFallback(IEnumerable<ChatMessage> source)
-            {
-                if (_bus.Advanced.IsConnected)
-                {
-                    try
-                    {
-                        foreach (var item in source)
-                        {
-                            await _bus.SendReceive.SendAsync(PersistentQName, item, CancellationToken.None);
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        _logger.LogError(e.ToString());
-                        foreach (var item in source)
-                        {
-                            await _fallbackMessageBuffer.Writer.WriteAsync(item, CancellationToken.None);
-                        }
-                    }
-                }
-                else
-                {
-                    foreach (var item in source)
-                    {
-                        await _fallbackMessageBuffer.Writer.WriteAsync(item, CancellationToken.None);
-                    }
-                }
-            }
-            async Task AddToQ(IEnumerable<ChatMessage> source)
-            {
-                if (_bus.Advanced.IsConnected)
-                {
-                    try
-                    {
-                        foreach (var item in source)
-                        {
-                            await _bus.SendReceive.SendAsync(PersistentQName, item, CancellationToken.None);
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        _logger.LogError(e.ToString());
-                        foreach (var item in source)
-                        {
-                            await _messageBuffer.Writer.WriteAsync(item, CancellationToken.None);
-                        }
-                    }
-                }
-                else
-                {
-                    foreach (var item in source)
-                    {
-                        await _messageBuffer.Writer.WriteAsync(item, CancellationToken.None);
-                    }
-                }
-            }
-        }
-        private async Task<int> SaveToDb(IEnumerable<ChatMessage> source)
-        {
-            using var scope = _serviceProvider.CreateScope();
-            var db = scope.ServiceProvider.GetRequiredService<LiveChatDbContext>();
-            foreach (var item in source)
-            {
-                item.Id = 0;
-            }
-            db.ChatMessage.AddRange(source);
-            return await db.SaveChangesAsync();
-
-        }
-    }
-
-    public static class ChannelReaderExtensions
-    {
-        public static int TryReadAll<T>(this ChannelReader<T> reader, out IEnumerable<T> list, int maxCount = int.MaxValue)
-        {
-            list = Enumerable.Empty<T>();
-            var i = 0;
-            while (i < maxCount && reader.TryRead(out var item))
-            {
-                ++i;
-                list = list.Append(item);
-            }
-            return i;
         }
     }
 }
